@@ -2,6 +2,8 @@ pipeline {
     agent any
 
     stages {
+
+        // ===== FRONTEND BUILD =====
         stage('Build Frontend') {
             steps {
                 dir('templefrontend') {
@@ -11,6 +13,7 @@ pipeline {
             }
         }
 
+        // ===== FRONTEND DEPLOY =====
         stage('Deploy Frontend to Tomcat') {
             steps {
                 bat '''
@@ -23,6 +26,7 @@ pipeline {
             }
         }
 
+        // ===== BACKEND BUILD =====
         stage('Build Backend') {
             steps {
                 dir('templebackend') {
@@ -31,16 +35,21 @@ pipeline {
             }
         }
 
+        // ===== BACKEND DEPLOY =====
         stage('Deploy Backend to Tomcat') {
             steps {
                 bat '''
-                if exist "C:\\Program Files\\Apache Software Foundation\\Tomcat 10.1\\webapps\\reacttempleapi.war" (
-                    del /Q "C:\\Program Files\\Apache Software Foundation\\Tomcat 10.1\\webapps\\reacttempleapi.war"
+                if exist "C:\\Program Files\\Apache Software Foundation\\Tomcat 10.1\\webapps\\springboottempleapi.war" (
+                    del /Q "C:\\Program Files\\Apache Software Foundation\\Tomcat 10.1\\webapps\\springboottempleapi.war"
+                )
+                if exist "C:\\Program Files\\Apache Software Foundation\\Tomcat 10.1\\webapps\\springboottempleapi" (
+                    rmdir /S /Q "C:\\Program Files\\Apache Software Foundation\\Tomcat 10.1\\webapps\\springboottempleapi"
                 )
                 copy "templebackend\\target\\*.war" "C:\\Program Files\\Apache Software Foundation\\Tomcat 10.1\\webapps\\"
                 '''
             }
         }
+
     }
 
     post {
