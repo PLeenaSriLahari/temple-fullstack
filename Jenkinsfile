@@ -29,7 +29,7 @@ pipeline {
         // ===== BACKEND BUILD =====
         stage('Build Backend') {
     steps {
-        dir('templebackend/TempleManagement') {
+        dir('templebackend/TempleManagemnet') {
             bat 'mvn clean package'
         }
     }
