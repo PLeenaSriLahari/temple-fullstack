@@ -1,0 +1,31 @@
+package com.klef.temple.model;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "temple_table")
+public class Temple {
+
+    @Id
+    @Column(name = "temple_id")
+    private int templeId;
+
+    @Column(name = "temple_name", nullable = false, length = 100)
+    private String name;
+
+    @Column(name = "location", nullable = false, length = 100)
+    private String location;
+
+    @Column(name = "lord_name", nullable = false, length = 50)
+    private String lordName;
+
+    @Column(name = "established_year", nullable = true)
+    private Integer establishedYear;
+
+ 
+
+    }
+}

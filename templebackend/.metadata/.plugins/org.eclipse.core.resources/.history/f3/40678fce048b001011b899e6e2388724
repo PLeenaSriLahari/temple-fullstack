@@ -1,0 +1,2 @@
+spring.application.name=TempleManagemnet
+server.tomcat.background-processor-delay=

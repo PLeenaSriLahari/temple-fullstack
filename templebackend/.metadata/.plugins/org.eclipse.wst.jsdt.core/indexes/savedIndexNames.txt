@@ -1,0 +1,6 @@
+INDEX VERSION 1.4+C:\Users\HP\Desktop\TEMPLE -FULLSTACK\templebackend\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+3357202951.index
+729267165.index
+685936185.index
+3804760198.index
+3723075250.index

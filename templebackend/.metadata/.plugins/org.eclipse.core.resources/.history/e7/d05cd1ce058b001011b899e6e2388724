@@ -1,0 +1,77 @@
+package com.klef.temple.model;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "temple_table")
+public class Temple {
+
+    @Id
+    @Column(name = "temple_id")
+    private int templeId;
+
+    @Column(name = "temple_name", nullable = false, length = 100)
+    private String name;
+
+    @Column(name = "location", nullable = false, length = 100)
+    private String location;
+
+    @Column(name = "lord_name", nullable = false, length = 50)
+    private String lordName;
+
+    @Column(name = "established_year", nullable = true)
+    private Integer establishedYear;
+
+	public int getTempleId() {
+		return templeId;
+	}
+
+	public void setTempleId(int templeId) {
+		this.templeId = templeId;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getLocation() {
+		return location;
+	}
+
+	public void setLocation(String location) {
+		this.location = location;
+	}
+
+	public String getLordName() {
+		return lordName;
+	}
+
+	public void setLordName(String lordName) {
+		this.lordName = lordName;
+	}
+
+	public Integer getEstablishedYear() {
+		return establishedYear;
+	}
+
+	public void setEstablishedYear(Integer establishedYear) {
+		this.establishedYear = establishedYear;
+	}
+
+	@Override
+	public String toString() {
+		return "Temple [templeId=" + templeId + ", name=" + name + ", location=" + location + ", lordName=" + lordName
+				+ ", establishedYear=" + establishedYear + "]";
+	}
+
+ 
+
+    }
+}

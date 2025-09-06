@@ -1,0 +1,5 @@
+package com.klef.temple.repository;
+
+public interface TempleRepository {
+
+}

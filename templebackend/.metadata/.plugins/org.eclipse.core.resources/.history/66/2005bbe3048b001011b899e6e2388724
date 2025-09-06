@@ -1,0 +1,3 @@
+spring.application.name=TempleManagemnet
+serve.port=1998
+
