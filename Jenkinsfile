@@ -28,12 +28,12 @@ pipeline {
 
         // ===== BACKEND BUILD =====
         stage('Build Backend') {
-            steps {
-                dir('templebackend') {
-                    bat 'mvn -f pom.xml clean package'
-                }
-            }
+    steps {
+        dir('templebackend/TempleManagement') {
+            bat 'mvn clean package'
         }
+    }
+}
 
         // ===== BACKEND DEPLOY =====
         stage('Deploy Backend to Tomcat') {
