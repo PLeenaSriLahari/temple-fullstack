@@ -32,7 +32,6 @@ INDEX VERSION 1.134+C:\Users\HP\Desktop\TEMPLE -FULLSTACK\templebackend\.metadat
 2966158250.index
 3718773627.index
 3285118671.index
-3187755560.index
 2622391323.index
 1526490631.index
 3150887736.index

@@ -64,6 +64,7 @@
 	</dependencies>
 
 	<build>
+	<finalName>reacttempleapi</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
