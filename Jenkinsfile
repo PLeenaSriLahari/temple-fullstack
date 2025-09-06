@@ -30,7 +30,7 @@ pipeline {
         stage('Build Backend') {
             steps {
                 dir('templebackend') {
-                    bat 'mvn -f templebackend/pom.xml clean package'
+                    bat 'mvn -f pom.xml clean package'
                 }
             }
         }
